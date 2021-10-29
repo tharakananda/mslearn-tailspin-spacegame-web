@@ -36,7 +36,6 @@ steps:
 
 - task: DotNetCoreCLI@2
   displayName: 'Restore project dependencies'
-
   inputs:
     command: 'restore'
     projects: '**/*.csproj'
@@ -50,5 +49,5 @@ steps:
     buildConfiguration: 'Release'
 
 - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: drop'
-    condition: succeeded()
+  displayName: 'Publish Artifact: drop'
+  condition: succeeded()
